@@ -108,3 +108,59 @@ body.lock {
       border: 1px solid $primary-red;
    }
 }
+
+.link {
+   transition: all 0.2s linear;
+   &--section {
+      display: flex;
+      align-items: center;
+
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      color: $primary-red;
+
+      .icon {
+         width: 17px;
+         height: 13px;
+         fill: $primary-red;
+
+         transition: fill 0.2s linear;
+      }
+
+      span {
+         display: none;
+
+         @media screen and (min-width: 1236px) {
+            display: block;
+            margin-right: 20px;
+         }
+      }
+
+      &:hover {
+         color: $decor;
+
+         .icon {
+            fill: $decor;
+         }
+      }
+   }
+}
+
+.section-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   margin-bottom: 30px;
+
+   @media screen and (min-width: 1236px) {
+      margin-bottom: 40px;
+   }
+}
+
+.swiper-slide {
+   display: flex;
+   flex-direction: column;
+   height: auto;
+}

@@ -1,0 +1,123 @@
+.main {
+   &__slider {
+      padding-top: 70px;
+      padding-bottom: 84px;
+   }
+}
+
+.slider {
+
+   &--immigrate {
+      background-color: $bg-block;
+   }
+
+   &__wrapper {
+      position: relative;
+   }
+
+   .swiper-pagination.slider-pagination {
+      position: absolute;
+      bottom: -30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: #DBDFEC;
+      margin: 0 6px;
+
+      transition: all 0.2s ease-in-out;
+      opacity: 1;
+
+      &:hover {
+         background-color: $primary-red;
+      }
+   }
+
+   .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      position: relative;
+      background-color: $primary-red;
+
+      &::before {
+         content: '';
+         display: block;
+
+         width: 16px;
+         height: 16px;
+
+         background: url(../../images/icons/Ellipse.png);
+
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+}
+
+.slider-card {
+   border: 1px solid #DBDFEC;
+   border-radius: 10px;
+
+   display: flex;
+   flex-direction: column;
+
+   overflow: hidden;
+   transition: all 0.2s linear;
+   position: relative;
+
+   flex: 1 1 auto;
+
+   &:hover {
+      box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25), 5px 5px 10px rgba(190, 190, 190, 0.25);
+
+      .slider-card {     
+         &__subtitle {
+            color: $primary-red;
+         } 
+      }
+   }
+
+   &__image {
+      height: 99px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__info {
+      padding: 15px 12px;
+   }
+
+   &__subtitle {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: $title;
+
+      transition: color 0.2s linear;
+   }
+
+   &__logo {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+   }
+}
+
+
+@media screen and (min-width: 1236px) {
+   .slider-card {
+      &__info {
+         padding: 15px;
+      }
+   
+      &__subtitle {
+         font-size: 18px;
+      }
+   }
+}
