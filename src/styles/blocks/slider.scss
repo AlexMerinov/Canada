@@ -1,18 +1,14 @@
 .main {
    &__slider {
-      padding-top: 70px;
-      padding-bottom: 84px;
+      padding: 70px 0;
    }
 }
 
 .slider {
 
-   &--immigrate {
-      background-color: $bg-block;
-   }
-
    &__wrapper {
       position: relative;
+      margin-bottom: 178px;
    }
 
    .swiper-pagination.slider-pagination {
@@ -55,6 +51,169 @@
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
+      }
+   }
+
+   .details {
+      &__header {
+         margin-bottom: 30px;
+      }
+
+      &__title {
+         font-weight: 700;
+         font-size: 20px;
+         line-height: 1.5;
+         color: $title;
+
+         @media screen and (min-width: 1236px) {
+            font-size: 24px;
+         }
+      }
+
+      &__link {
+         display: inline-flex;
+         align-items: center;
+
+         font-weight: 700;
+         font-size: 20px;
+         line-height: 1.5;
+         color: $title;
+
+         transition: all 0.2s ease-in-out;
+
+         .icon {
+            width: 15px;
+            height: 12px;
+            fill: $primary-red;
+
+            transition: all 0.2s linear;
+         }
+
+         &:hover {
+            color: $primary-red;
+
+            .icon {
+               margin-left: 5px;
+            }
+         }
+      }
+
+      &-card {
+         background: #FFFFFF;
+         box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25), 5px 5px 10px rgba(190, 190, 190, 0.25);
+         border-radius: 10px;
+         overflow: hidden;
+         position: relative;
+         &__preview {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 208px; 
+
+            @media screen and (min-width: 1236px) {
+               height: 236px;
+            }
+         }
+
+         &__info {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            padding: 15px 12px;
+            background: rgba(30, 34, 46, 0.4);
+
+            font-weight: 700;
+            font-size: 14px;
+            color: #FFFFFF;
+
+            @media screen and (min-width: 1236px) {
+               padding: 12px 14px 20px 14px;
+               font-size: 18px;
+            }
+         }
+
+         &__link {
+            padding: 10px 12px;
+            border-bottom: 1px solid #F3F3F3;
+   
+            font-weight: 400;
+            font-size: 14px;
+            color: $text;
+
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+               background-color: #FFF6F6;
+               color: $primary-red;
+            }
+
+            @media screen and (min-width: 1236px) {
+               padding: 10px 15px;
+               font-size: 16px;
+            }
+         }
+
+         &::after {
+            content: '';
+
+            display: block;
+            width: 49px;
+            height: 44px;
+            background: url(../../images/little-logo.png) center / contain no-repeat;
+
+            position: absolute;
+            top: 15px;
+            left: 15px;
+         }
+      }
+
+      .question {
+         border-radius: 10px;
+         overflow: hidden;
+         &__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            height: 357px;
+            margin-bottom: 20px;
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+
+         &__title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 1236px) {
+               font-size: 24px;
+               margin-bottom: 30px;
+            }
+         }
+
+         &__info {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 20px;
+            color: $text;
+
+            display: block;
+            margin-bottom: 15px;
+         }
       }
    }
 }

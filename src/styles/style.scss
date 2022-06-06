@@ -26,9 +26,24 @@ body.lock {
    border-radius: 4px;
    transition: all 0.2s linear;
 
+   &--question {
+      width: 100%;
+
+      .icon {
+         width: 14px;
+         height: 12px;
+         fill: #fff;
+         margin-left: 10px;
+      }
+   }
+
    &:hover {
       background-color: #FFF;
       color: $primary-red;
+
+      .icon {
+         fill: $primary-red;
+      }
    }
 
    &:active {
