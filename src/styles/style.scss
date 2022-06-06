@@ -34,10 +34,11 @@ body.lock {
    &:active {
       background-color: #DD1718;
       border-color: #DD1718;
+      color: #fff;
    }
 
    @media screen and (min-width: 1236px) {
-      padding: 20px;
+      padding: 19px;
       font-size: 18px;
    }
 }
@@ -47,24 +48,27 @@ body.lock {
    color: $title;
    font-size: 20px;
 
-   &--main {
-      font-size: 24px;
-
-      @media screen and (min-width: 768px) {
-         font-size: 32px;
-      }
-   
-      @media screen and (min-width: 1236px) {
-         font-size: 48px;
-      }
-   }
-
    @media screen and (min-width: 768px) {
       font-size: 24px;
    }
 
    @media screen and (min-width: 1236px) {
       font-size: 32px;
+   }
+
+   &--main {
+      font-size: 24px;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+         font-size: 32px;
+         margin-bottom: 30px;
+      }
+   
+      @media screen and (min-width: 1236px) {
+         font-size: 48px;
+         margin-bottom: 35px;
+      }
    }
 }
 

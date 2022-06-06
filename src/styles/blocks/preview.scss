@@ -1,0 +1,144 @@
+.preview {
+   background-image: linear-gradient(-37deg,rgb(255, 55, 55) 30%,#f4f4f4 27%);
+   position: relative;
+   padding-top: 35px;
+   min-height: 667px;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      min-width: 310px;
+      min-height: 302px;
+
+      background: url(../../images/main.png) center / cover no-repeat;
+
+      @media screen and (min-width: 1234px) {
+         min-width: 603px;
+         min-height: 583px;
+         left: auto;
+         right: 14%;
+         transform: translateX(0);
+      }
+   }
+
+   &__list {
+      padding-left: 34px;
+      margin-bottom: 35px;
+
+      @media screen and (min-width: 1234px) {
+         padding-left: 48px;
+         margin-bottom: 40px;
+      }
+   }
+
+   &__item {
+      font-weight: 400;
+      font-size: 16px;
+      color: $text;
+
+      position: relative;
+
+      margin-bottom: 15px;
+      &:last-child {
+         margin: 0;
+      }
+
+      &::before {
+         content: '';
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         width: 24px;
+         height: 24px;
+
+         position: absolute;
+         top: 0;
+         left: -48px;
+
+         background: url(../../images/maple.svg) center / cover no-repeat;
+
+         @media screen and (min-width: 1234px) {
+            width: 36px;
+            height: 36px;
+         }
+      }
+
+      @media screen and (min-width: 1234px) {
+         font-size: 24px;
+      }
+   }
+
+   .details {
+      display: flex;
+      align-items: center;
+
+      &__link {
+         margin-right: 10px;
+      }
+
+      .btn {
+         min-width: 165px;
+
+         @media screen and (min-width: 1234px) {
+            padding: 19px 50px;
+         }
+      }
+   }
+
+   &__cube {
+      position: absolute;
+      display: none;
+
+      &--left {
+         left: 55px;
+         bottom: 164px;
+      }
+      &--right {
+         top: 218px;
+         right: 20%;
+      }
+
+      @media screen and (min-width: 1234px) {
+         display: block;
+      }
+   }
+
+   &__dots {
+      position: absolute;
+      right: -50px;
+      bottom: 134px;
+      width: 140px;
+      height: 30px;
+
+      @media screen and (min-width: 1234px) {
+         width: 282px;
+         height: 62px;
+      }
+
+      &--left {
+         bottom: 0;
+         left: 257px;
+         display: none; 
+
+         @media screen and (min-width: 1234px) {
+            display: block;
+            
+            width: 46px;
+            height: 210px;
+         }
+      }
+   }
+
+   @media screen and (min-width: 1234px) {
+      min-height: 750px;
+
+      background-image: linear-gradient(-60deg,rgb(255, 55, 55) 24%,#f4f4f4 22%);
+   }
+
+}
