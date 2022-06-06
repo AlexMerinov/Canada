@@ -26,11 +26,16 @@
       <div class="footer__top">
         <div class="container">
           <div class="footer__wrapper">
-            <picture class="footer__logo">
+            <a href="index.html" class="footer__logo">
               <img src="images/logo-2nd.png" alt="no-logo" />
-            </picture>
+            </a>
             <nav class="footer__nav footer-nav">
-              <ul class="footer-nav__list">
+              <ul
+                class="footer-nav__list"
+                style="
+                  background: url(images/map.png) center / contain no-repeat;
+                "
+              >
                 <li class="footer-nav__item">
                   <a href="#" class="footer-nav__link">
                     <span>Иммиграция</span>
@@ -187,7 +192,7 @@
                     </a>
                   </li>
                 </ul>
-                <a href="#" class="footer__youtb youtb">
+                <a href="#" class="social__youtb youtb">
                   <img src="images/youtb.svg" alt="no-image" />
                 </a>
               </div>
@@ -198,11 +203,15 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span class="footer__copyright">© 2015-2021 Imigrant.Today</span>
-        <div class="footer__doc">
-          <span>Условия использования</span>
-          <span>Политика конфиденциальности</span>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__info">
+            <span class="footer__copyright">© 2015-2021 Imigrant.Today</span>
+            <div class="footer__doc">
+              <a href="#">Условия использования</a>
+              <a href="#">Политика конфиденциальности</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
