@@ -149,6 +149,7 @@ body.lock {
          @media screen and (min-width: 1236px) {
             display: block;
             margin-right: 20px;
+            font-size: 24px;
          }
       }
 
@@ -158,6 +159,10 @@ body.lock {
          .icon {
             fill: $decor;
          }
+      }
+
+      @media screen and (min-width: 1236px) {
+         font-size: 24px;
       }
    }
 }
