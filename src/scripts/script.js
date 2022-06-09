@@ -14,7 +14,7 @@ const popularSlider = new Swiper('.popular-slider', {
          slidesPerView: 3,
       },
 
-      1236: {
+      1280: {
          slidesPerView: 4,
          spaceBetween: 30
       },
@@ -38,7 +38,7 @@ const popularSlider = new Swiper('.popular-slider', {
          slidesPerView: 3,
       },
 
-      1236: {
+      1280: {
          slidesPerView: 4,
          spaceBetween: 30
       },

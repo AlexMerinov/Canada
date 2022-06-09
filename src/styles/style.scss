@@ -11,7 +11,7 @@ body.lock {
    padding: 15px;
    background-color: $primary-red;
 
-   display: flex;
+   display: inline-flex;
    align-items: center;
    justify-content: center;
 
@@ -21,7 +21,9 @@ body.lock {
    line-height: 1.5;
    line-height: 24px;
    color: #FFF;
+   white-space: nowrap;
 
+   cursor: pointer;
    border: 1px solid $primary-red;
    border-radius: 4px;
    transition: all 0.2s linear;
@@ -52,9 +54,22 @@ body.lock {
       color: #fff;
    }
 
-   @media screen and (min-width: 1236px) {
+   .icon {
+      width: 21px;
+      height: 14px;
+      fill: #fff;
+      margin-left: 12px;
+
+      transition: fill 0.2s linear;
+   }
+
+   @media screen and (min-width: 1280px) {
       padding: 19px;
       font-size: 18px;
+
+      &--max {
+         padding: 20px 50px;
+      }
    }
 }
 
@@ -67,7 +82,7 @@ body.lock {
       font-size: 24px;
    }
 
-   @media screen and (min-width: 1236px) {
+   @media screen and (min-width: 1280px) {
       font-size: 32px;
    }
 
@@ -75,12 +90,12 @@ body.lock {
       font-size: 24px;
       margin-bottom: 20px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1280px) {
          font-size: 32px;
          margin-bottom: 30px;
       }
    
-      @media screen and (min-width: 1236px) {
+      @media screen and (min-width: 1280px) {
          font-size: 48px;
          margin-bottom: 35px;
       }
@@ -92,12 +107,19 @@ body.lock {
    font-size: 14px;
    color: $text;
 
+   @media screen and (min-width: 1280px) {
+      font-size: 16px;
+   }
+
    &--sm {
       font-size: 10px;
    }
 
    &--lg {
-      font-size: 20px;
+      font-size: 16px;
+      @media screen and (min-width: 1280px) {
+         font-size: 20px;
+      }
    }
 }
 
@@ -113,14 +135,19 @@ body.lock {
    font-size: 16px;
    color: #999999;
 
+   outline: none;
    transition: all 0.2s linear;
 
-   &:active {
+   &:focus {
       color: $title;
    }
 
    &--error {
       border: 1px solid $primary-red;
+   }
+   
+   &:hover {
+      border: 1px solid $decor;
    }
 }
 
@@ -146,7 +173,7 @@ body.lock {
       span {
          display: none;
 
-         @media screen and (min-width: 1236px) {
+         @media screen and (min-width: 1280px) {
             display: block;
             margin-right: 20px;
             font-size: 24px;
@@ -161,7 +188,7 @@ body.lock {
          }
       }
 
-      @media screen and (min-width: 1236px) {
+      @media screen and (min-width: 1280px) {
          font-size: 24px;
       }
    }
@@ -174,7 +201,7 @@ body.lock {
 
    margin-bottom: 30px;
 
-   @media screen and (min-width: 1236px) {
+   @media screen and (min-width: 1280px) {
       margin-bottom: 40px;
    }
 }

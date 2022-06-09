@@ -1,0 +1,320 @@
+.article-list {
+   &__articles {
+      margin-bottom: 70px;
+   }
+}
+
+.articles {
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+   }
+
+   &__count {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $title;
+
+      display: none;
+
+      @media screen and (min-width: 1280) {
+         display: block;
+      }
+   }
+
+   &__baner {
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 1280) {
+         margin-bottom: 40px;
+      }
+   }
+
+
+
+   .baner {
+      position: relative;
+      padding: 20px;
+      width: 100%;
+      background-color: $bg-block;
+      border-radius: 4px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-weight: 400;
+      font-size: 16px;
+      color: $title;
+
+      transition: all 0.2s linear;
+
+      &__info {
+         display: flex;
+         flex-direction: column;
+
+         span {
+            margin-right: 10px;
+         }
+
+         @media screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+         }
+      }
+
+      &__link {
+         font-size: 16px;
+         color: $primary-red;
+
+         &:hover {
+            text-decoration: underline;
+         }
+
+         @media screen and (min-width: 768px) {
+            font-size: 18px;
+         }
+      }
+
+      &__close {
+         width: 24px;
+         height: 24px;
+
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+
+         position: absolute;
+         top: 15px;
+         right: 15px;
+         span {
+            width: 20px;
+            height: 2px;
+            border-radius: 4px;
+            background-color: #AFB2C4;
+
+            transition: all 0.2s linear;
+            &:nth-child(1) {
+               transform: rotate(45deg) translateY(50%);
+            }
+            &:nth-child(2) {
+               transform: rotate(-45deg) translateY(-50%);
+            }
+         }
+
+         @media screen and (min-width: 768px) {
+            top: 50%;
+            transform: translateY(-50%);
+         }
+
+         &--active {
+            span {
+               &:nth-child(1) {
+                  transform: rotate(0) translateY(50%);
+                  height: 0;
+               }
+               &:nth-child(2) {
+                  transform: rotate(0) translateY(-50%);
+                  height: 0;
+               }
+            }
+         }
+
+      }
+
+      @media screen and (min-width: 768px) {
+         font-size: 18px;
+      }
+
+      &--close {
+         height: 0;
+         padding: 0;
+         margin: 0;
+         overflow: hidden;
+      }
+   }
+
+   &__wrapper {
+      margin-bottom: 30px;
+      margin-top: -30px;
+
+      @media screen and (min-width: 1280) {
+         margin-bottom: 40px;
+      }
+
+      .col {
+         margin-top: 30px;
+      }
+   }
+
+   .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__list  {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 8px;
+      }
+
+      &__item {
+         width: 35px;
+         height: 35px;
+         overflow: hidden;
+
+         border: 1px solid #DBDFEC;
+         border-radius: 10px;
+
+         transition: all 0.2s ease-in-out;
+         
+         &:hover  {
+            border-color: $primary-red;
+
+            .pagination__link {
+               background-color: $primary-red;
+               color: #fff;
+               .icon {
+                  fill: #fff;
+               }
+            }
+         }
+      }
+
+      &__link {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         height: 100%;
+
+         font-weight: 400;
+         font-size: 14px;
+         color: $title;
+
+         transition: all 0.2s linear;
+
+         .icon {
+            width: 6px;
+            height: 10px;
+            fill: $title;
+
+            transition: fill 0.2s linear;
+
+            &--prev {
+               transform: rotate(90deg);
+            }
+
+            &--next {
+               transform: rotate(-90deg);
+            }
+         }
+      }
+   }
+
+   &__popular {
+      background-color: $bg-block;
+   }
+}
+
+.articles-card {
+   display: flex;
+   flex-direction: column;
+
+   border: 1px solid $bg-block;
+   border-radius: 10px;
+   overflow: hidden;
+
+   transition: all 0.2s linear;
+   &__preview {
+      height: 208px;
+      width: 100%;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      &::after  {
+         content: 'Иммиграционне новости';
+         display: block;
+
+         font-weight: 600;
+         font-size: 10px;
+         color: #fff;
+         text-transform: uppercase;
+
+         padding: 5px 10px;
+         background: rgba(229, 82, 65, 0.7);
+         border-radius: 4px;
+
+         position: absolute;
+         bottom: 15px;
+         left: 15px;
+      }
+
+      &::before {
+         content: '';
+         display: block;
+
+         width: 40px;
+         height: 38px;
+
+         position: absolute;
+         top: 15px;
+         left: 15px;
+
+         background: url(../../images/little-logo.png) center no-repeat;
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__content {
+      padding: 15px;
+
+      @media screen and (min-width: 1280px) {
+         padding: 20px 15px;
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 16px;
+      color: $title;
+      margin-bottom: 5px;
+
+      transition: all 0.2s linear;
+
+      @media screen and (min-width: 1280px) {
+         font-size: 20px;
+      }
+   }
+
+   &__desc {
+      font-weight: 400;
+      font-size: 14px;
+      color: $text;
+
+      @media screen and (min-width: 1280px) {
+         font-size: 16px;
+      }
+   }
+
+   &:hover {
+      box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25);
+
+      .articles-card__title {
+         color: $primary-red;
+      }
+   }
+}
