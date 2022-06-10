@@ -28,17 +28,6 @@ body.lock {
    border-radius: 4px;
    transition: all 0.2s linear;
 
-   &--question {
-      width: 100%;
-
-      .icon {
-         width: 14px;
-         height: 12px;
-         fill: #fff;
-         margin-left: 10px;
-      }
-   }
-
    &:hover {
       background-color: #FFF;
       color: $primary-red;
@@ -64,11 +53,53 @@ body.lock {
    }
 
    @media screen and (min-width: 1280px) {
-      padding: 19px;
+      padding: 20px;
       font-size: 18px;
 
       &--max {
          padding: 20px 50px;
+      }
+   }
+
+   &--big {
+      padding: 15px 30px;
+
+      @media screen and (min-width: 1280px) {
+         padding: 15px 30px ;
+      }
+   }
+
+   &--little {
+      padding: 10px;
+
+      @media screen and (min-width: 1280px) {
+         padding: 10px;
+      }
+   }
+
+   &--question {
+      width: 100%;
+
+      .icon {
+         width: 14px;
+         height: 12px;
+         fill: #fff;
+         margin-left: 10px;
+      }
+   }
+
+   &--bottom {
+      @media screen and (max-width: 1280px) {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         left: 0;
+
+         font-size: 18px;
+
+         border-radius: 0;
+         border: none;
+         border-top: 1px solid $primary-red;
       }
    }
 }
