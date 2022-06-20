@@ -61,6 +61,7 @@
    flex-direction: column;
 
    transition: all 0.2s linear;
+   box-sizing: border-box;
 
    &:hover {
       box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25), 5px 5px 10px rgba(190, 190, 190, 0.25);
