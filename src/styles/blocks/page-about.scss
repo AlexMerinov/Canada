@@ -1,0 +1,153 @@
+.about-content {
+   padding-top: 40px;
+   padding-bottom: 70px;
+   &__wrapper {
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+
+      @media screen and (min-width: 1280px) {
+         position: relative;
+         flex-direction: row;
+         align-items: start;
+      }
+   }
+
+   &__sticky {
+      padding: 30px 15px;
+      max-width: 380px;
+
+      box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25), 5px 5px 10px rgba(190, 190, 190, 0.25);
+      border-radius: 10px;
+
+      h4 {
+         font-weight: 700;
+         font-size: 18px;
+         color: $title;
+         margin-bottom: 15px;
+         @media screen and (min-width: 1280px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+         }
+      }
+
+      p {
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 20px;
+         color: $title;
+         margin-bottom: 15px;
+      }
+      @media screen and (min-width: 1280px) {
+         position: sticky;
+         top: 40px;
+      }
+
+      .btn {
+         width: 100%;
+         padding: 15px auto;
+      }
+   }
+
+   &__title {
+      margin-bottom: 30px;
+   }
+
+   &__picture {
+      display: block;
+      margin-bottom: 40px;
+   }
+
+   p {
+      font-weight: 400;
+      font-size: 16px;
+      color: $text;
+      margin-bottom: 30px; 
+   }
+
+   &__column {
+      max-width: 790px;
+   }
+   
+   &__block {
+      margin-bottom: 40px;
+
+      p {
+         font-weight: 400;
+         font-size: 16px;
+         color: $text;
+         margin-bottom: 15px;
+         &:last-child {
+            margin: 0;
+         }
+      }
+
+      a {
+         font-weight: 400;
+         font-size: 16px;
+         color: $primary-red;
+         display: inline;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+
+      ul {
+         li {
+            padding-left: 32px;
+            margin-bottom: 10px;
+
+            position: relative;
+            &::before {
+               content: '';
+               display: block;
+
+               position: absolute;
+               top: 0;
+               left: 0;
+
+               width: 24px;
+               height: 24px;
+
+               background: url(../../images/icons/maple.svg);
+            }
+
+            @media screen and (min-width: 1280px) {
+               margin-bottom: 12px;
+            }
+         }
+      }
+
+      @media screen and (min-width: 1280px) {
+         margin-bottom: 55px;
+      }
+   }
+
+   &__subtitle {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      img {
+         margin-right: 10px;
+         @media screen and (min-width: 1280px) {
+            margin-right: 15px;
+         }
+      }
+
+      h2 {
+         font-weight: 700;
+         font-size: 18px;
+         color: $title;
+
+         @media screen and (min-width: 1280px) {
+            font-size: 24px;
+         }
+      }
+
+      @media screen and (min-width: 1280px) {
+         margin-bottom: 30px;
+      }
+   }
+
+}

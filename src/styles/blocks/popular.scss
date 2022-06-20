@@ -51,15 +51,23 @@
 
 .popular-card {
    border: 1px solid #DBDFEC;
-   box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25), 5px 5px 10px rgba(190, 190, 190, 0.25);
    border-radius: 10px 10px 4px 4px;
 
    overflow: hidden;
    position: relative;
-   flex: 1 1 auto;
 
+   flex: 1 1 auto;
    display: flex;
    flex-direction: column;
+
+   transition: all 0.2s linear;
+
+   &:hover {
+      box-shadow: -5px 0px 10px rgba(190, 190, 190, 0.25), 5px 5px 10px rgba(190, 190, 190, 0.25);
+      .popular-card__title {
+         color: $primary-red;
+      }
+   }
 
    &__image {
       width: 100%;
@@ -108,6 +116,7 @@
       font-size: 14px;
       color: $title;
       margin-bottom: 10px;
+      transition: color 0.2s linear;
 
       @media screen and (min-width: 1280px) {
          font-size: 18px;
