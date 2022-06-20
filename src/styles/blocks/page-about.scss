@@ -60,13 +60,79 @@
 
    p {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       color: $text;
-      margin-bottom: 30px; 
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 1280px) {
+         font-size: 16px;
+      }
+
+      &-main {
+         font-size: 16px;
+
+         @media screen and (min-width: 1280px) {
+            font-size: 20px;
+         }
+      }
    }
 
    &__column {
       max-width: 790px;
+
+      a {
+         display: inline-flex;
+         align-items: center;
+         vertical-align: bottom;
+         position: relative;
+
+         font-size: 14px;
+         color: $primary-red;
+
+         padding-left: 34px;
+         &:hover {
+            text-decoration: underline;
+         }
+
+         &::before {
+            content: '';
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 22px;
+            height: 16px;
+
+            transform: translateY(-50%);
+            background: url(../../images/icons/email.svg) center no-repeat;
+         }
+      }
+   }
+
+   ul {
+      li {
+         padding-left: 20px;
+         margin-bottom: 10px;
+         position: relative;
+
+         &::before {
+            content: '';
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 10px;
+            height: 10px;
+
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: $primary-red;
+         }
+      }
    }
    
    &__block {
