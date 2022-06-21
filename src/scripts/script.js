@@ -21,6 +21,10 @@ const popularSlider = new Swiper('.popular-slider', {
    },
  
 });
+
+
+
+// function init all sliders
  
 const sliders = document.querySelectorAll('.slider__wrapper .slider');
 
@@ -55,6 +59,18 @@ if (sliders) {
        
       });      
 
+   });
+}
+
+// search Header
+
+const searchClose   = document.querySelector('.search__close');
+const searchWrapper = document.querySelector('.search__wrapper');
+
+if (searchClose) {
+   searchClose.addEventListener('click', () => {
+      searchClose.classList.toggle('search__close--active');
+      searchWrapper.classList.toggle('search__wrapper--active');
    });
 }
 

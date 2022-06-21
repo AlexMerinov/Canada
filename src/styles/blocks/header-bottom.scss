@@ -1,0 +1,335 @@
+.header-bottom {
+   padding: 15px 0;
+   &__wrapper {
+      display: flex;
+      align-items: center;
+   }
+
+   &__logo {
+      display: block;
+      max-width: 278px;
+      max-height: 84px;
+      margin-right: 70px;
+
+      @media screen and (max-width: 1280px) {
+         width: 133px;
+         height: 40px;
+         margin-right: 0;
+      }
+   }
+
+   @media screen and (max-width: 1280px) {
+      position: relative;
+   }
+}
+
+.burger-btn {
+   flex: 0 0 40px;
+   height: 40px;
+
+   border-radius: 5px;
+   overflow: hidden;
+
+   display: none;
+   &__wrapper {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background: $primary-red;
+
+      span {
+         display: block;
+         width: 24px;
+         height: 2px;
+         background: #fff;
+         border-radius: 10px;
+         &:nth-child(2) {
+            margin: 6px 0;
+         }
+      }
+   }
+
+   @media screen and (max-width: 1280px) {
+      display: block;
+      margin-right: 20px;
+   }
+}
+
+.user-btn {
+   display: none;
+   align-items: center;
+   justify-content: center;
+
+   width: 44px;
+   height: 44px;
+   margin-right: 15px;
+
+   background: #FCEEEC;
+   border-radius: 5px;
+   .icon {
+      width: 20px;
+      height: 20px;
+      fill: $primary-red;
+   }
+
+   @media screen and (max-width: 1280px) {
+      display: flex;
+   }
+}
+
+.nav-menu {
+   display: flex;
+   align-items: center;
+
+   .drop-down {
+      display: none;
+   }
+
+   .btn {
+      &--mobile {
+         display: none;
+      }
+   }
+
+   @media screen and (max-width: 1280px) {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+
+      .drop-down {
+         display: block;
+         width: 100%;
+         padding: 0 18px;
+
+         &__title {
+            .icon {
+               &__arrow {
+                  margin-left: auto;
+               }
+            }
+         }
+
+         &__item {
+            padding: 12px 15px;
+            border: 1px solid #DBDFEC;
+            border-radius: 5px;
+            &:first-child {
+               margin-bottom: 10px;
+            }
+         }
+      }
+   }
+}
+
+.search {
+   display: flex;
+   align-items: center;
+   margin-right: 15px;
+   margin-left: auto;
+   position: relative;
+
+   &__wrapper {
+      position: absolute;
+      top: 0;
+      right: 44px;
+
+      display: flex;
+      align-items: center;
+
+      width: 0;
+      overflow: hidden;
+
+      transition: all 0.2s ease-in-out;
+
+      &--active {
+         width: 644px;
+      }
+   }
+
+   &__input {
+      height: 44px;
+      padding: 12px 15px;
+      flex: 1 1 600px;
+
+      border: 1px solid #DBDFEC;
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+      outline: none;
+
+      font-weight: 400;
+      font-size: 14px;
+      color: #A6A6A6;
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+         border: 1px solid $text-light;
+         border-right: none;
+      }
+      &:focus {
+         border: 1px solid $primary-red;
+         border-right: none;
+         color: $text;
+      }
+   }
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 44px;
+      height: 44px;
+
+      border: 1px solid $primary-red;
+      background: $primary-red;
+      transition: all 0.2s ease-in-out;
+      .icon {
+         width: 20px;
+         height: 20px;
+         fill: #fff;
+         transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+         background: #fff;
+         .icon {
+            fill: $primary-red;
+         }
+      }
+   }
+
+   &__close {
+      display: block;
+      width: 44px;
+      height: 44px;
+
+      background: #FCEEEC;
+      border-radius: 5px;
+      position: relative;
+
+      &::after {
+         content: '';
+         display: block;
+
+         width: 24px;
+         height: 24px;
+
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+
+         background: url(../../images/icons/search.svg) center  no-repeat;
+      }
+
+      &::before {
+         content: '';
+         display: none;
+
+         width: 24px;
+         height: 24px;
+
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+
+         background: url(../../images/icons/cross.svg) center  no-repeat;
+      }
+
+      &--active {
+         border-radius: 0 5px 5px 0;
+
+         &::after {
+            display: none;
+         }
+
+         &::before {
+            display: block;
+         }
+      }
+   }
+}
+
+.menu-list {
+   display: flex;
+   align-items: center;
+
+   gap: 30px;
+
+   &__link {
+      font-weight: 700;
+      font-size: 18px;
+      color: $title;
+
+      transition: color 0.2s linear;
+
+      &:hover {
+         color: $primary-red;
+      }
+   }
+
+   @media screen and (max-width: 1280px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+      margin-bottom: 30px;
+
+      &__item {
+         width: 100%;
+      }
+
+      &__link {
+         padding: 10px 18px;
+         border-bottom: 1px solid #DBDFEC;
+         position: relative;
+
+         &::after {
+            content: '';
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            right: 18px;
+            transform: translateX(-50%);
+
+            width: 10px;
+            height: 5px;
+            background: url(../../images/icons/arrow-bott.svg);
+         } 
+      }
+   }
+}
+
+.btn-chance {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   padding: 10px 15px;
+
+   border: 1px solid $primary-red;
+   border-radius: 5px;
+
+   font-weight: 700;
+   font-size: 18px;
+   color: $primary-red;
+
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      background-color: $primary-red;
+      color: #fff;
+   }
+
+   @media screen and (max-width: 1280px) {
+      display: none;
+   }
+}
