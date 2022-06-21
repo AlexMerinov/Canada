@@ -1,5 +1,9 @@
 .header {
    box-shadow: 0px 5px 20px rgba(190, 190, 190, 0.25);
+   @media screen and (max-width: 1280px) {
+      position: fixed;
+      width: 100%;
+   }
 }
 
 .header-top {
@@ -55,9 +59,23 @@
          left: 0;
          bottom: -10px;
       }
+
       &:hover {
          .drop-down__list {
             display: block;
+         }
+      }
+
+      @media screen and (min-width: 1280px) {
+         &:hover {
+            color: $primary-red;
+
+            .icon {
+               fill: $primary-red;
+               &__arrow {
+                  transform: rotate(-180deg);
+               }
+            }
          }
       }
    }
@@ -87,23 +105,14 @@
          }
       }
 
-      &:hover {
-         color: $primary-red;
 
-         .icon {
-            fill: $primary-red;
-            &__arrow {
-               transform: rotate(-180deg);
-            }
-         }
-      }
    }
 
    &__list {
       width: 100%;
 
       position: absolute;
-      z-index: 10;
+      z-index: 30;
       top: 32px;
       left: 0;
 

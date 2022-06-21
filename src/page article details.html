@@ -103,11 +103,11 @@
         <div class="container">
           <div class="header-bottom__wrapper">
             <button class="header-bottom__burger burger-btn">
-              <span class="burger-btn__wrapper">
+              <div class="burger-btn__wrapper">
                 <span></span>
                 <span></span>
                 <span></span>
-              </span>
+              </div>
             </button>
             <a href="index.html" class="header-bottom__logo">
               <img src="images/logo.png" alt="logo" />
@@ -181,9 +181,11 @@
                   </ul>
                 </li>
               </ul>
-              <button class="nav-menu__btn btn btn--mobile">
-                Оценить шансы
-              </button>
+              <div class="chance-wrapper">
+                <button class="nav-menu__btn btn btn--mobile">
+                  Оценить шансы
+                </button>
+              </div>
             </nav>
             <form class="header-bottom__search search">
               <div class="search__wrapper">
@@ -202,11 +204,10 @@
               </div>
               <button type="button" class="search__close"></button>
             </form>
-            <button class="header-bottom__user-btn user-btn" type="button">
-              <svg class="icon">
-                <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
-              </svg>
-            </button>
+            <button
+              class="header-bottom__user-btn user-btn"
+              type="button"
+            ></button>
             <button class="header-bottom__chance btn-chance" type="button">
               Оценить шансы
             </button>
