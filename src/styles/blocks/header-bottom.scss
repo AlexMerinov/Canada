@@ -5,6 +5,7 @@
    &__wrapper {
       display: flex;
       align-items: center;
+      position: relative;
    }
 
    &__logo {
@@ -49,7 +50,7 @@
    overflow: hidden;
 
    display: none;
-	z-index: 10;
+	z-index: 10;  
    &__wrapper {
       width: 100%;
       height: 100%;
@@ -60,7 +61,7 @@
       flex-direction: column;
 
       background: $primary-red;
-
+      transition: background 0.2s ease-in-out;
       span {
          display: block;
          width: 24px;
@@ -72,6 +73,10 @@
          &:nth-child(2) {
             margin: 6px 0;
          }
+      }
+
+      &:hover {
+         background: #f16d5f;
       }
    }
 
@@ -97,7 +102,7 @@
 
 .user-btn {
    display: none;
-
+   position: relative;
    width: 44px;
    height: 44px;
 	z-index: 10;
@@ -105,7 +110,7 @@
    background: #FCEEEC;
    border-radius: 5px;
 
-	position: relative;
+	transition: background 0.2s ease-in-out;
 	&::after {
 		content: '';
 		display: block;
@@ -146,6 +151,9 @@
 		}
 	}
 
+   &:hover {
+      background: #f8e2de;
+   }
 
    @media screen and (max-width: 1280px) {
       display: flex;
@@ -179,16 +187,16 @@
 
    @media screen and (max-width: 1280px) {
       flex-direction: column;
-      position: absolute;
+      position: fixed;
       top: 0;
-      left: -100%;
+      left: -200%;
 		
       width: 100%;
 		height: 100vh;
 		padding-top: 74px;
 		padding-bottom: 30px;
 
-		transition: all 0.2s ease-in-out;
+		transition: all 0.5s ease-in-out;
 		&--active {
 			left: 0;
 			z-index: -1;
@@ -271,16 +279,11 @@
       overflow: hidden;
 
       transition: all 0.2s ease-in-out;
-
-      &--active {
-         width: 644px;
-      }
    }
 
    &__input {
       height: 44px;
       padding: 12px 15px;
-      flex: 1 1 600px;
 
       border: 1px solid #DBDFEC;
       border-radius: 5px 0 0 5px;
@@ -308,7 +311,7 @@
       align-items: center;
       justify-content: center;
 
-      width: 44px;
+      flex: 0 0 44px;
       height: 44px;
 
       border: 1px solid $primary-red;
@@ -338,6 +341,7 @@
       border-radius: 5px;
       position: relative;
 
+      transition: background 0.2s ease-in-out;
       &::after {
          content: '';
          display: block;
@@ -379,7 +383,39 @@
             display: block;
          }
       }
+
+      &:hover {
+         background: #f8e2de;
+      }
    }
+
+   &--active {
+      z-index: 99;
+      width: auto;
+
+      .search {
+         &__wrapper {
+            width: 715px;
+            margin-right: -44px;
+            padding-right: 44px;
+         } 
+         &__input {
+            width: 100%;
+         }
+      }
+
+      @media screen and (max-width: 1280px) {
+         position: absolute;
+         width: 100%;
+         justify-content: end;
+         .search {
+            &__wrapper {
+               width: 100%;
+            }
+         }
+      }
+   }
+
 }
 
 .menu-list {
@@ -422,7 +458,7 @@
             position: absolute;
             top: 50%;
             right: 18px;
-            transform: translateX(-50%);
+            transform: translateX(-50%) rotate(-90deg);
 
             width: 10px;
             height: 5px;
