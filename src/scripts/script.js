@@ -96,13 +96,15 @@ if (burgerBtn) {
 
 //user menu
 
-const userBtn      = document.querySelector('.user-btn');
-const userMobile   = document.querySelector('.user-mobile');
+const userBtn    = document.querySelector('.user-btn');
+const userMobile = document.querySelector('.user-mobile');
+const userHeader = document.querySelector('.header-bottom__header-user')
 
 if (userBtn) {
    userBtn.addEventListener('click', () => {
       userBtn.classList.toggle('user-btn--active');
       userMobile.classList.toggle('user-mobile--active');
+      userHeader.classList.toggle('header-bottom__header-user--active');
       burgerBtn.classList.remove('burger-btn--active');
       navMenu.classList.remove('nav-menu--active');
          if (userMobile.classList.contains('user-mobile--active')) {
