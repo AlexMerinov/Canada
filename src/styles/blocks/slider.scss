@@ -278,10 +278,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @media screen and (min-width: 1280px) {
+         height: 171px;
+      }
    }
 
    &__info {
       padding: 15px 12px;
+      height: 100%;
+      background-color: #FFFFFF;
    }
 
    &__subtitle {

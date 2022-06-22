@@ -59,13 +59,15 @@
 
          position: absolute;
          top: 0;
-         left: -48px;
+         left: -36px;
 
          background: url(../../images/icons/maple.svg) center / cover no-repeat;
 
          @media screen and (min-width: 1280px) {
             width: 36px;
             height: 36px;
+
+            left: -48px;
          }
       }
 
