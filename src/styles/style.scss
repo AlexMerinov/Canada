@@ -7,6 +7,13 @@ body.lock {
    overflow: hidden;
 }
 
+.p-mobile {
+   padding-top: 74px;
+   @media screen and (min-width: 1280px) {
+      padding-top: 0;
+   }
+}
+
 .btn {
    padding: 15px;
    background-color: $primary-red;

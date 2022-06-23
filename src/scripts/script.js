@@ -138,6 +138,21 @@ if (document.body.clientWidth < 1280) {
 }
 
 
+//scroll------------------------------>
+const anchors = document.querySelectorAll('.js-anchor');
+if (anchors) {
+    for (let anchor of anchors) {
+       anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          const top = document.querySelector(anchor.getAttribute('href')).offsetTop;
+          window.scrollTo({
+             top: top,
+             behavior: "smooth"
+          });
+       });
+   };
+}
+
 
 
 
