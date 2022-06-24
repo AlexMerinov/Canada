@@ -119,15 +119,15 @@
    margin-bottom: 25px;
    &__date {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 12px;
       color: $text;
-      margin-right: 60px;
+      margin-right: 20px;
    }
 
    .book-mark {
       display: flex;
       align-items: center;
-      margin-right: 30px;
+      margin-right: 20px;
       position: relative;
 
       &__check {
@@ -139,12 +139,15 @@
 
       &__label {
          font-weight: 400;
-         font-size: 14px;
+         font-size: 12px;
          color: $text;
 
          display: block;
          cursor: pointer;
          padding-left: 25px;
+
+         position: relative;
+         z-index: 10;
       }
 
       .icon {
@@ -157,7 +160,7 @@
          left: 0;
       }
 
-      &__check:checked + &__label + .icon {
+      &__check:checked ~ .icon {
          fill: $primary-red;
       }
    }
@@ -165,8 +168,8 @@
    .stars {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-right: 16px;
+      gap: 6px;
+      margin-right: 10px;
 
       &__item {
          display: flex;
@@ -174,8 +177,8 @@
       }
 
       .icon {
-         width: 18px;
-         height: 17px;
+         width: 16px;
+         height: 16px;
          fill: #FADB14;
       }
    }
@@ -184,6 +187,158 @@
       font-weight: 400;
       font-size: 14px;
       color: $title;
+   }
+
+   @media screen and (min-width: 1280px) {
+
+      &__date {
+         font-size: 14px;
+         margin-right: 60px;
+      }
+      
+      .book-mark {
+         margin-right: 30px;
+
+         &__label {
+            font-size: 14px;
+         }
+      }
+      .stars {
+         margin-right: 16px;
+         gap: 8px;
+
+         .icon {
+            width: 18px;   
+            height: 18px;
+         }
+      }
+      
+   }
+}
+
+.have-immigrate {
+   padding: 30px 15px;
+   margin-bottom: 40px;
+   border-radius: 10px;
+   background-color: #F4F4F4;
+
+   display: grid;
+   grid-template-columns: minmax(160px, 1fr) minmax(114px, 1fr);
+   grid-template-rows: repeat(3, min-content);
+   grid-gap: 20px;
+
+   &__content {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 18px;
+      color: $title;
+
+      margin-bottom: 15px;
+   }
+
+   &__desc {
+      font-weight: 400;
+      font-size: 14px;
+      color: $title;
+   }
+
+   &__price {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+         &:nth-child(1) {
+            font-weight: 700;
+            font-size: 30px;
+            color: $title;
+
+            margin-right: 15px;
+         }
+
+         &:nth-child(2) {
+            font-weight: 400;
+            font-size: 16px;
+            color: #AFB2C4;
+         }
+      }
+   }
+
+   &__book {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+         width: 114px;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__buy {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+
+      margin: 0 -5px;
+      display: flex;
+   }
+
+   &__btn {
+      flex: 1 1 50%;
+      margin: 0 5px;
+   }
+
+   @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, minmax(min-content, 400px));
+      grid-template-rows: repeat(2, minmax(min-content, 1fr));
+
+      padding: 50px 30px;
+
+      &__content {
+         grid-column: 1 / 3;
+         grid-row: 1 / 2;
+      }
+
+      &__price {
+         grid-column: 1 / 2;
+         grid-row: 2 / 3;
+
+         flex-direction: column;
+         align-items: center;
+
+         span {
+            &:nth-child(1) {
+               margin-right: 0;
+            }
+         }
+      }
+
+      &__buy {
+         grid-column: 2 / 3;
+         grid-row: 2 / 3;
+
+         align-items: center;
+      }
+
+      &__book {
+         grid-column: 3 / 4;
+         grid-row: 1 / 3;
+
+         img {
+            width: 152px;
+         }
+      }
    }
 }
 
