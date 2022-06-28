@@ -95,6 +95,19 @@ body.lock {
       }
    }
 
+   &--non-availability {
+      background-color: #fff;
+      color: $primary-red;
+      width: 100%;
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+         background-color: $primary-red;
+         color: #fff;
+      }
+   }
+
    &--bottom {
       @media screen and (max-width: 1280px) {
          position: absolute;
