@@ -95,6 +95,20 @@ body.lock {
       }
    }
 
+   &--comments {
+      padding: 20px 50px;
+
+      @media screen and (min-width: 1280px) {
+         padding: 20px 50px;
+      }
+   }
+
+   &--comments.btn-active {
+      background: #F4F4F4;
+      border: 1px solid #F4F4F4;
+      color: $text-light;
+   }
+
    &--non-availability {
       background-color: #fff;
       color: $primary-red;
@@ -106,6 +120,12 @@ body.lock {
          background-color: $primary-red;
          color: #fff;
       }
+   }
+
+   &--show-more {
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
    }
 
    &--bottom {

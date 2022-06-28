@@ -154,5 +154,37 @@ if (anchors) {
 }
 
 
+//Accordion comment ----------------------->
+   const answers = Array.from(document.querySelectorAll('.answer'));
+
+   answers.forEach((answer) => {
+      answer.addEventListener('click', answerOpen);
+   });
+
+   function answerOpen(e) {
+      e.preventDefault();
+      let currentAnswer = e.target.closest('.answer');
+      let currentComment = e.target.nextElementSibling;
+      currentAnswer.classList.toggle('answer--active');
+      if (currentAnswer.classList.contains('answer--active')) {
+         currentComment.style.minHeight = "100px";
+      } else {
+         currentComment.style.minHeight = 0;
+      }
+   }
+
+
+// comment open
+const commentAdd    = document.querySelector('.btn--comments');
+const newComment = document.querySelector('.new-comment');
+
+if (commentAdd) {
+   commentAdd.addEventListener('click', () => {
+      commentAdd.classList.toggle('btn-active');
+      newComment.classList.toggle('new-comment--active');
+   });
+}
+
+
 
 

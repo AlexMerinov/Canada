@@ -1,0 +1,161 @@
+.comments {
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-bottom: 20px;
+   }
+
+   &__count {
+      font-weight: 700;
+      font-size: 24px;
+      color: $title;
+   }
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__new {
+      margin-bottom: 50px;
+   }
+}
+
+.comment {
+   margin-bottom: 20px;
+   padding-bottom: 15px;
+   border-bottom: 1px solid $bg;
+
+   &__author {
+      margin-bottom: 15px;
+   }
+
+   p {
+      font-weight: 400;
+      font-size: 16px;
+      color: $text;
+
+      max-width: 700px;
+      margin-bottom: 15px;
+   }
+}
+
+.author {
+   display: flex;
+   align-items: center;
+
+   &__photo {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__name {
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: $title;
+
+      margin-bottom: 5px;
+   }
+
+   &__date {
+      font-weight: 400;
+      font-size: 14px;
+      color: $text;
+   }
+}
+
+.answer {
+   &__label {
+      font-weight: 600;
+      font-size: 10px;
+      color: $primary-red;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+         color: $title;
+      }
+   }
+
+   &__input {
+      resize: none;
+      width: 100%;
+      height: 0;
+      padding: 0;
+
+      border: none;
+      border-radius: 5px;
+      background: rgba(33, 62, 97, 0.04);
+   
+      font-weight: 400;
+      font-size: 16px;
+      color: #999999;
+   
+      outline: none;
+      transition: all 0.2s linear;
+   }
+
+   &--active {
+      .answer {
+         &__input {
+            padding: 15px;
+            border: 1px solid #E1E1E1;
+            margin-bottom: 20px;
+         }
+      }
+   }
+}
+
+.subcomments {
+   &__item {
+      margin-left: 30px;
+      margin-bottom: 20px;
+   }
+   .comment {
+      padding-left: 20px;
+      border-left: 2px solid #DBDFEC;
+      border-bottom: none;
+   }
+}
+
+.new-comment {
+   display: none;
+   flex-direction: column;
+   align-items: flex-start;
+   &__input {
+      margin-bottom: 30px;
+   }
+
+   .input {
+      min-height: 150px;
+      resize: none;
+      width: 100%;
+   }
+
+   .btn {
+      padding: 20px 50px;
+   }
+
+   &--active {
+      display: block;
+   }
+}
+
