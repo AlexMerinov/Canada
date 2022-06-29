@@ -102,6 +102,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
       @media screen and (max-width: 768px) {
          & * {
             flex: 1 1 auto;

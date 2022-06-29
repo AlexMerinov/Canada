@@ -155,7 +155,7 @@ if (anchors) {
 
 
 //Accordion comment ----------------------->
-   const answers = Array.from(document.querySelectorAll('.answer'));
+   const answers = Array.from(document.querySelectorAll('.answer__label'));
 
    answers.forEach((answer) => {
       answer.addEventListener('click', answerOpen);
@@ -183,6 +183,11 @@ if (commentAdd) {
       commentAdd.classList.toggle('btn-active');
       newComment.classList.toggle('new-comment--active');
    });
+}
+
+// go back function
+function goBack() {
+   window.history.back();
 }
 
 
